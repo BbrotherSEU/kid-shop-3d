@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  overflow: hidden;
+  background: #d7f3e6;
+  color: #24312c;
+  font-family: "Noto Sans SC", "Microsoft YaHei", sans-serif;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+#root canvas {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.num {
+  font-family: Nunito, "Noto Sans SC", sans-serif;
+  font-variant-numeric: tabular-nums;
+}
+
+@keyframes nudge {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  75% {
+    transform: translateX(5px);
+  }
+}
+
+.nudge {
+  animation: nudge 0.28s ease;
+}
+
+input,
+textarea {
+  user-select: text;
+}
+
+@keyframes cart-pop {
+  0% {
+    transform: scale(1);
+  }
+  35% {
+    transform: scale(1.12);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.cart-pop {
+  animation: cart-pop 0.38s ease;
+}
